@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Steeltoe.Common.Hosting;
 
 namespace EurekaDemo
 {
@@ -12,8 +11,7 @@ namespace EurekaDemo
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
-			Host.CreateDefaultBuilder(args)
-				.UseCloudHosting(41011, 44361)
+			Host.CreateDefaultBuilder(args)				
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
 					webBuilder.UseStartup<Startup>();
