@@ -13,7 +13,8 @@ namespace EurekaDemo
 
 		public EurekaFetchService(IDiscoveryClient discoveryClient, HttpClient client, ILogger<EurekaFetchService> logger)
 		{
-			_discoveryClient = discoveryClient as DiscoveryClient;
+			_discoveryClient = discoveryClient as DiscoveryClient 
+				?? throw new NotImplementedException(nameof(discoveryClient));
 			_client = client;
 			_logger = logger;
 		}
@@ -23,7 +24,7 @@ namespace EurekaDemo
 			Thread.Sleep(10000);
 
 			var apps = _discoveryClient.Applications.GetRegisteredApplications();
-			//var appUrl = "";
+
 			var appName = "";
 			var count = 0;
 			foreach (var app in apps)
