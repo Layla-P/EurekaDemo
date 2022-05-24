@@ -1,31 +1,12 @@
-﻿{
+{
+
   "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:41011",
-      "sslPort": 44361
-    }
-  },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "dadjoke",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "EurekaDemo": {
+    "DadJokeApi": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
-      "launchBrowser": true,
       "launchUrl": "dadjoke",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:5005"
     }
   }
 }
